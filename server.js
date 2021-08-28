@@ -151,7 +151,7 @@ function guest(req, res, next) {
     res.status(401).redirect('/authed')
 }
 
-const port = 3025
+const port = process.env.PORT || 3025;
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`)
 })
